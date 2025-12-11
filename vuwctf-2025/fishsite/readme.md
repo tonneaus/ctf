@@ -92,7 +92,7 @@ sqlite> select * from this_table_doesnt_exist;
 Parse error: no such table: this_table_doesnt_exist
 ```
 
-Let's check for if there's a table called `flag`.
+Let's check if there's a table called `flag`.
 ```sql
 select * from flag;
 ```
