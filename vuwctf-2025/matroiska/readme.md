@@ -1,7 +1,7 @@
 ![](matroiska.png)
 
-We're given the file [`matroiska1.png`](matroiska1.png).
-It *is* actually a png file:
+We're given the file [`matroiska1.png`](matroiska1.png),
+and it is actually a png file:
 ```
 $ file matroiska1.png 
 matroiska1.png: PNG image data, 204 x 420, 8-bit/color RGB, non-interlaced
