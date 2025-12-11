@@ -13,7 +13,9 @@ readfile("/flag.txt");
 ?>
 ```
 Upload it.
+
 > Your image has successfully been uploaded to /images
+
 Navigate to `/images/pwn.png`.
 ```
 VuwCTF{Just_up10d_ITl_ol}
