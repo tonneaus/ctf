@@ -1,6 +1,6 @@
 ![](delicious\_cooking.png)
 
-We're given a sqlite database and a username.  Let's open the
+We're given [a sqlite database](users.db) and a username.  Let's open the
 database in `sqlite3` and see what tables there are.
 
 ```
@@ -54,6 +54,7 @@ force the password.
 
 ```py
 import hashlib
+
 
 DIGEST = bytes.fromhex('09be2259e0224f41b96b633b73e7138b50b4be0a1ae20c0eb6a7434e8fc47303')
 SALT = bytes.fromhex('334aa758c52bb2f862f1607ff098e954')
