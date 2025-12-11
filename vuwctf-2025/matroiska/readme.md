@@ -70,12 +70,14 @@ $ hexdump -C matroiska2.bin | head
 00000090  83 7c 79 8d 2f 4e c5 55  6e b0 76 12 23 f3 56 ee  |.|y./N.Un.v.#.V.|
 ```
 
-But it does have some structure, e.g., at offset 0x00032880 there is
+But it does have some structure, e.g., at offset `0x00032880` there is
 an unusual long stretch of printable characters:
 <details>
-<summary>long hex dump, click to view</summary>
-`xxd` prints printable and non-printable characters in different colours.
-```
+<summary>Long hex dump, click to view</summary>
+<code>xxd</code> prints printable and non-printable characters in different colours.
+<br>
+<br>
+<pre>
 $ xxd -s 0x000326f0 matroiska2.bin 
 000326f0: 61e7 36ac edbb e869 e3a1 f3bc 7481 f1d9  a.6....i....t...
 00032700: 5a90 22a6 66bf 4ce4 aa03 642a 4ff3 a5c9  Z.".f.L...d*O...
@@ -107,12 +109,12 @@ $ xxd -s 0x000326f0 matroiska2.bin
 000328a0: 2d23 2e32 702f 2523 2728 6235 2573 6927  -#.2p/%#'(b5%si'
 000328b0: 7560 3f2b 7128 6235 302b 3f27 3e2d 7d36  u`?+q(b50+?'>-}6
 000328c0: 713e 7c7f 2925 7664 4942 0d6e 0829 636a  q>|.)%vdIB.n.)cj
-000328d0: 7d78 6576 3f3f 7f70 4166 312f 613c 2f20  }xev??.pAf1/a</ 
+000328d0: 7d78 6576 3f3f 7f70 4166 312f 613c 2f20  }xev??.pAf1/a&lt;/ 
 000328e0: 2b5d 1908 6b3e 7c63 333d 7134 7569 606c  +]..k>|c3=q4ui`l
 000328f0: 2332 657f 6761 6431 6678 7339 7868 7e7d  #2e.gad1fxs9xh~}
-00032900: 3a61 7a7f 2836 727e 7969 233d 703c 2f20  :az.(6r~yi#=p</ 
-00032910: 3c7c 2420 3f27 6922 333d 6864 2f05 7d6e  <|$ ?'i"3=hd/.}n
-00032920: 6b66 312f 613c 2f20 2b4b 383d 2834 787f  kf1/a</ +K8=(4x.
+00032900: 3a61 7a7f 2836 727e 7969 233d 703c 2f20  :az.(6r~yi#=p&lt;/ 
+00032910: 3c7c 2420 3f27 6922 333d 6864 2f05 7d6e  &lt;|$ ?'i"3=hd/.}n
+00032920: 6b66 312f 613c 2f20 2b4b 383d 2834 787f  kf1/a&lt;/ +K8=(4x.
 00032930: 2927 2428 317d 3928 7127 7360 283a 7664  )'$(1}9(q's`(:vd
 00032940: 3305 7d6e 6b66 312f 7d6e 6b66 312f 2523  3.}nkf1/}nkf1/%#
 00032950: 2728 6235 3836 2220 2c2d 353a 3f36 2b20  '(b586" ,-5:?6+ 
@@ -142,10 +144,10 @@ $ xxd -s 0x000326f0 matroiska2.bin
 00032ad0: 7732 7869 3b74 1214 747c 3222 3e32 7860  w2xi;t..t|2">2x`
 00032ae0: 3370 7a72 2520 6c72 6432 7869 3b74 1214  3pzr% lrd2xi;t..
 00032af0: 747c 3222 3e32 7860 3370 4166 312f 7d6e  t|2">2x`3pAf1/}n
-00032b00: 6b66 312f 613a 2220 7735 123c 2223 7f7b  kf1/a:" w5.<"#.{
-00032b10: 3c3a 2229 7f31 6c72 6432 7869 3b74 0434  <:").1lrd2xi;t.4
+00032b00: 6b66 312f 613a 2220 7735 123c 2223 7f7b  kf1/a:" w5.&lt;"#.{
+00032b10: 3c3a 2229 7f31 6c72 6432 7869 3b74 0434  &lt;:").1lrd2xi;t.4
 00032b20: 786a 333a 2a32 7860 3370 4166 312f 7d6e  xj3:*2x`3pAf1/}n
-00032b30: 6b7a 3e7d 3928 7102 747c 3e3c 2236 6566  kz>}9(q.t|><"6ef
+00032b30: 6b7a 3e7d 3928 7102 747c 3e3c 2236 6566  kz>}9(q.t|>&lt;"6ef
 00032b40: 3220 754c 312f 7d72 6434 7569 671c 0f00  2 uL1/}rd4uig...
 00032b50: 2f05 6161 337c 6962 2d23 2e32 7031 5737  /.aa3|ib-#.2p1W7
 00032b60: 5234 eb0f 5d41 640f 554e 0936 4aab 4c06  R4..]Ad.UN.6J.L.
@@ -158,7 +160,7 @@ $ xxd -s 0x000326f0 matroiska2.bin
 00032bd0: 33f3 ee80 b228 980c 61cc 912d 3d4a 4918  3....(..a..-=JI.
 00032be0: 32bb 096b 5e47 544f 4d1e 89ac 535f 5942  2..k^GTOM...S_YB
 00032bf0: 0906 1864 cdff 1f13 544f 54e5 2006 003f  ...d....TOT. ..?
-```
+</pre>
 </details>
 
 We can also see the word "layer" at various places:
@@ -227,16 +229,12 @@ PNG = b'\x89PNG\r\n'  # png magic bytes
 def extract(img_bytes, xor_coterm=PNG, keysize=6):
     trailer_pos = img_bytes.find(b'\0\0\0\0IEND') + 12
     trailer = img_bytes[trailer_pos:]
-    def gen_segments():
-        for i in range(0, len(trailer), keysize):
-            for byte in trailer[i:i + keysize]:
-                yield byte
     key = xor(trailer[:keysize], xor_coterm)
-    plaintext = xor(gen_segments(), repeat(key))
+    plaintext = xor(trailer, repeat(key))
     return key, plaintext
 
 
-with open('../matroiska1.png', 'rb') as fp:
+with open('matroiska1.png', 'rb') as fp:
     data = fp.read()
 
 for i in range(2, 100):
@@ -248,6 +246,21 @@ for i in range(2, 100):
     print(key)
     print(data[:20])
     print()
+```
+```
+$ python poc.py 
+b'layer2'
+b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\xb2'
+
+b'layer3'
+b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00r'
+
+b'layer4'
+b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\\'
+
+b'layer5'
+b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\xec'
+
 ```
 
 At the end we get `matroiska5.png` which contains the flag:
