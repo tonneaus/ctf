@@ -65,7 +65,7 @@ Now that we have a cookie, we can access `/monitor`.
 `/monitor` executes arbitrary user-controlled queries on the database, subject
 to several gotchas:
 
-- Queries with these substrings are not run:
+- Queries with these substrings are not executed:
   ```py
   DISALLOWED_WORDS = ["insert", "create", "alter", "drop", "delete", "backup", "transaction", "commit", "rollback", "replace", "update", "pragma", "attach", "load", "vacuum"]
   ```
