@@ -1,8 +1,4 @@
-# Challenge
-
 ![](matroiska.png)
-
-# Solution
 
 We're given the file [`matroiska1.png`](matroiska1.png).
 It *is* actually a png file:
