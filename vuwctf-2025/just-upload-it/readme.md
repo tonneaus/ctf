@@ -20,3 +20,8 @@ Navigate to `/images/pwn.png`.
 ```
 VuwCTF{Just_up10d_ITl_ol}
 ```
+
+# Mistakes this application made
+
+- executing untrusted data as php
+- not restricting the application's access to the filesystem
