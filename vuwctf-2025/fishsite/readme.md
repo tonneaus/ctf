@@ -140,16 +140,17 @@ Runtime error: 1.so: cannot open shared object file: No such file or directory
 However, `load` is one of the disallowed words, so we can't use this.
 
 In the end I abandoned the runtime-error oracle and used a
-timing oracle instead ([adapted from here][timing-oracle-query]).
+timing oracle instead [(adapted from here)][timing-oracle-query].
 ```sql
 select case when [BOOLEAN_QUERY] then 1 else 1337=like('abcdefg',upper(hex(randomblob(5_000_000/2)))) end;
 ```
 If `[BOOLEAN_QUERY]` is truthy, the query returns 1 immediately. Otherwise,
 sqlite creates a 2.5 MB [blob of random bytes][randomblob], converts it to
-uppercase hex, and searches for the string `abcdefg` within it. On the CTF
-infrastructure this dillydallying with random bytes took about 1 extra
-second, which was consistent and measurable.  Undelayed requests took
-0.2--0.4 seconds; delayed requests took 1.2--1.4 seconds.
+uppercase hex, and searches for the string `abcdefg` within it (which will
+always fail, and therefore take as long as possible). On the CTF infrastructure
+this dillydallying with random bytes took about 1 extra second, and
+consistently.  Undelayed requests took 0.2--0.4 seconds; delayed requests
+took 1.2--1.4 seconds.
 
 Setting up the timing oracle:
 ```py
@@ -304,7 +305,7 @@ VuwCTF{h3art_0v_p3ar1}
 
 - not using a library for making SQL queries
 - not hashing passwords
-- blacklisting SQL queries instead of whitelisting
+- blacklisting arbitrary SQL queries instead of whitelisting fixed ones
 
 
 [error-oracle-query]: https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/SQLite%20Injection.md#sqlite-error-based
