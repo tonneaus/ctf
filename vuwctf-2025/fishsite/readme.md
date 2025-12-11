@@ -2,9 +2,10 @@
 
 ![](fishsite.png)
 
-The target is a Flask web application.  We're given the source code. The flag
-is not referenced anywhere in the source code, but the application does talk to
-a sqlite database, so maybe the flag is in there.
+The target is a Flask web application.  We're given [the source code](fishsite.py).
+The flag is not referenced anywhere in the source code, but the application does
+talk to a sqlite database, so maybe the flag is in there.  We are not given a
+database.
 
 There are two endpoints that interact with the database:
 
@@ -13,10 +14,10 @@ There are two endpoints that interact with the database:
 
 `/login` accepts a username and password, checks if those credentials exist in
 the table `fish`, and if they do then we're given a session cookie.  The cookie
-contains one key--value pair: the key is `username`;
+contains one key&ndash;value pair: the key is `username`;
 the value is the username we provided to `/login`.
 
-`/monitor` first ensures that you have a session cookie with the key `username`:
+`/monitor` first ensures that you have any session cookie with the key `username`:
 ```py
 if 'username' not in flask.session:
     return flask.redirect('/')
