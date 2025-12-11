@@ -92,7 +92,8 @@ sqlite> select * from this_table_doesnt_exist;
 Parse error: no such table: this_table_doesnt_exist
 ```
 
-Let's check if there's a table called `flag`.
+Let's check if there's a table called `flag`.  To do this, POST form data to
+`/monitor` with one key (`query`) and with this as the value:
 ```sql
 select * from flag;
 ```
@@ -122,7 +123,7 @@ Let's check if the first `flag` entry starts with `VuwCTF{`.
 To do this, we need our oracle to answer questions about the characters inside the
 flag.
 
-Given a boolean expression `b`, we want a query that produces a runtime error
+Given some boolean expression `b`, we want a query that produces a runtime error
 if and only if `b` is false.  Queries like this exist already,
 [here is one I found][error-oracle-query]:
 ```sql
