@@ -23,8 +23,7 @@ if 'username' not in flask.session:
     return flask.redirect('/')
 ```
 
-Then `/monitor` takes the string labelled `query` from form data and
-executes it as SQL on the database.
+Then `/monitor` takes a string you give it and executes it as SQL on the database.
 
 The plan is to get a session cookie with the key `username`, gain access to
 the database, and exfiltrate the flag somehow.
