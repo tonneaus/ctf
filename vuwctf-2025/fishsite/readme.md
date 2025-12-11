@@ -1,12 +1,6 @@
-# Challenge
-
-- https://2025.vuwctf.com/challenges?c=fishsite
-- https://instancer.management.2025.vuwctf.com/fishsite
-- TODO archive link
+<!-- TODO archive link -->
 
 ![](fishsite.png)
-
-# Solution
 
 The target is a Flask web application.  We're given the source code. The flag
 is not referenced anywhere in the source code, but the application does talk to
